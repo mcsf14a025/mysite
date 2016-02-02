@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/JS/jquery-2.1.4.js"></script>
+    <script src="~/JS/bootstrap.js"></script>
+    <link href="~/CSS/slider.css" rel="stylesheet" />
+    <link href="~/CSS/StyleSheet1.css" rel="stylesheet" />
+     <link href="~/CSS/bootstrap.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+  
+   <nav class="navbar navbar-default" id="nav1">
+         <div class="container">
+             <img src="/images/logo2.png" />
+             @*  <a class="page-header"> </a>
+            <div class="row" >
+         <div class="col-md-3">
+            <img src="/images/onlinelogomaker.png" id="i1" />
+             </div>
+         <div class="col-sm-6">
+            <h1 id="h1">EVENTS AT....</h1></div>*@
+        </div >
+            @*<div class="btn btn-default" role="group" aria-label="...">*@
+             <a style="background-color:burlywood"  id="b1" type="button" class="btn btn-default" href="/Home/Index">Home</a>
+           <a style="background-color:burlywood; color:#00cdcd; background-color:burlywood; width:120px;"  type="button" class="btn btn-default" href="/Home/Categry">Category</a>
+           <a style="background-color:burlywood; color:#00cdcd; background-color:burlywood; width:120px;"   type="button" class="btn btn-default" href="/Accounts/Accounts">Accounts</a>
+          @* <a style="background-color:burlywood" type="button" class="btn btn-default" href="/Home/SignUp">Sign Up</a>*@
+           <a style="background-color:burlywood; color:#00cdcd; background-color:burlywood; width:120px;"  type="button" class="btn btn-default" href="/Home/AboutUs">About Us</a>
+           @*</div>*@
+      @*     </div>*@
+        </nav>
+   
+            
+   
+          
+
+    @RenderBody()
+  @*  <footer>
+        <div>
+  <ul class="pagination">
+    <li>
+      <a  id="l2" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a class="active" id="l1" href="/Home/Index">1</a></li>
+    <li><a class="" id="l1" href="/Home/Categry">2</a></li>
+    <li ><a class="" id="l1" href="/Home/Accounts">3</a></li>
+    <li ><a id="l1" class="" href="/Home/AboutUs">4</a></li>
+    <li> <a  id="l1" class= href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+  </div>
+        </footer>*@
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+        
+</body>
+</html>

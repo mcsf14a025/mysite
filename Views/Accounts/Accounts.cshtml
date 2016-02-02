@@ -1,0 +1,242 @@
+﻿    @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MvcApplication1.Models.User
+
+
+<link href="~/CSS/slider.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Accounts</title>
+    <script type="text/javascript" src="~/JS/jquery-2.1.4.js"></script>
+    <script type="text/javascript"></script>
+<link href="~/CSS/StyleSheet1.css" rel="stylesheet" />
+
+</head>
+    
+<body>
+    
+
+    <div>
+          <div id="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/images/profile.png" style="margin-left:540px; margin-top:30px;" />
+            </div>
+            <div>
+                <img src="/images/signup.jpg" style=" margin-top:30px;" />
+            </div>
+
+        </div>
+<div id="pages">
+    <div id="f1">
+        <br /><br />
+        <section id="section1" >
+            <form class="form-inline"; action="http:/Accounts/Login"  method= "post"; style="background-color:AppWorkspace" "float:right";>
+                <h2 id="tags">Sign In</h2>
+                <label id="u1" >Username</label>
+                <input type="email" placeholder="Email" id="input1" name="email" />
+                <label id="pass">Password</label>
+                <input type="password" placeholder="Password" id="input2" name="password" />
+                <input type="submit" value="Log in" id="submit" @*onclick="Login()"*@ />
+                <script>
+                 $(document).ready(function Login() {
+            $("#submit").click(function  () {
+                var data = {
+                    "email": $("#input1").val(),
+                    "password": $("#input2").val(),
+                };
+                $.ajax({
+                    url: "/Accounts/Login",
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (status) {
+                        if (status==true) {
+                            window.location("profile");
+                        }
+                        else if(status==false)
+                        {
+                            alert("login again");
+                        }
+                    },
+                    //error: function () {
+                    //    alert("login again");
+                    //}
+                });
+            });
+        });
+       </script>
+                          </form>
+        </section>
+    </div>
+</div>
+         
+        </div>
+
+    </div>
+              <div>
+                    <h2 id="tags">Sign Up</h2>
+                    <script>
+                        $(document).ready(function () {
+                            $("#password").prop("readonly", true);
+                            $("#cpassword").prop("readonly", true);
+                            $("#con_email").click(function () {
+
+                                var data = {
+                                    "email": $("#email").val()
+                                };
+                                $.ajax({
+                                    url: "/Accounts/Con_Email",
+                                    type: "POST",
+                                    data: JSON.stringify(data),
+                                    dataType: "json",
+                                    contentType: "application/json",
+                                    success: function (status) {
+                                        if (status == true) {
+                                            alert("already exists");
+                                        }
+                                        else {
+                                            $("#password").prop("readonly", false);
+                                            $("#cpassword").prop("readonly", false);
+                                            alert(" congrats u r verified u may proceed now");
+                                        }
+                                    }
+
+                                });
+                            })
+
+                        });
+                    </script>
+                    <script>
+                        $(document).ready(function () {
+                            $("#cpassword").focusout(function () {
+                                var u = $("#password").val();
+                                var v = $("#cpassword").val();
+                                if (u == v) {
+                                    // alert("password matche");
+                                }
+                                else {
+                                    alert("password does not match re-enter password");
+                                }
+                            });
+                        });
+                    </script>
+                    <script>
+                        $(document).ready(function () {
+                            $("#submit2").click(function () {
+                                //var data = {
+                                //    "email": $("#email").val(),
+                                //    "password": $("#password").val(),
+                                //    "confirm_password": $("#cpassword").val(),
+                                //    "gender":$("#u2")
+                                //};
+                                //$.ajax({
+                                //    url: "/Accounts/SignUp",
+                                //    type: "POST",
+                                //    data: JSON.stringify(data),
+                                //    dataType: "json",
+                                //    contentType: "application/json",
+                                //    success: function (status) {
+                                //        if (status == true) {
+                                //            // window.location("Profile");
+                                //            alert(status);
+                                //        }
+                                //        else if(status==false)
+                                //        {
+                                //             alert("SignUp again");
+                                //        }
+                                    
+                                //    }
+                                //    //error: function () {
+                                      
+                                       
+                                //    //}
+                                //});
+                                var e = $("#email").val();
+                                var p = $("#password").val();
+                                var cp = $("#cpassword").val();
+                                var un = $("#username").val();
+                                $.getJSON("/Accounts/SignUp?un=" + e + "&pwd=" + p + "&cpwd=" + cp+ "&un= "+un, function (d) {
+                                    if (d == true) {
+                                        window.location("profile");
+                                       // alert("welcome to my website");
+                                    }
+                                    else {
+                                        alert("singn up again");
+                                    }
+                                });
+                                });
+                            });
+       </script>
+
+                  @using (Html.BeginForm())
+                  {
+ @Html.ValidationSummary()
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <table>
+                                               <tr>
+                                                   <td>  <p>@Html.LabelFor(x => x.Email, new { id = "u2" })</p> </td>
+                                                   <td> <p>@Html.TextBoxFor(x => x.Email, new { placeholder = "Email", id = "email", name = "email" })</p></td>
+                                                   <td>    <input type="button" class="styled-button-2"  value="Confirm Email" id="con_email"  /></td>
+                                               </tr>
+                                            </table> 
+                                        </div>
+                                        <div> 
+                                             <table>
+                                               <tr>
+                                             <td> <p>@Html.LabelFor(x => x.Password, new { id = "u2" })</p></td>   
+                                            <td><p>@Html.TextBoxFor(x => x.Password, new { placeholder = "Password", id = "password", name = "password" })</p></td>
+                                                </tr>
+                                            </table> 
+
+                                        </div>
+                                        <div>  
+                                             <table>
+                                               <tr>
+                                                <td><p>@Html.LabelFor(x => x.Confirm_password, new { id = "u2" })</p></td> 
+                                             <td><p>@Html.TextBoxFor(x => x.Confirm_password, new { placeholder = "Confirm Password", id = "cpassword", name = "confirm_password" })</p></td>
+                                               </tr>
+                                            </table>
+                                        </div>
+                                         <div>  
+                                             <table>
+                                               <tr>
+                                                <td><p>@Html.LabelFor(x => x.Username, new { id = "u2" })</p></td> 
+                                             <td><p>@Html.TextBoxFor(x => x.Username, new { placeholder = "Username", id = "un", name = "username" })</p></td>
+                                               </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <table>
+                                               <tr>
+                                                <td>
+                                                  <p>@Html.LabelFor(x => x.Gender, new { id = "u2" })Select For Male</p> </td>
+                                           <td> <p>@Html.RadioButtonFor(x => x.Gender, "Male") </p></td>
+                                                   </tr>
+                                                <tr>
+ <td>
+                                               <p>@Html.LabelFor(x => x.Gender, new { id = "u2" })Select For female</p>  </td>
+                                           <td> <p>@Html.RadioButtonFor(x => x.Gender, "Female") </p></td>
+                                                </tr>
+                                                </table>
+                                        </div>
+                                        <div class="abcp">
+
+                                            <p>
+                                                <input type="submit" value="Sign Up" id="submit2" /></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> }
+              </div>
+</body>
+</html>

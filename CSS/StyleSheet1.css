@@ -1,0 +1,309 @@
+﻿
+body {
+
+}
+#nav1 {
+    background-color:lightgray;
+}
+#h1 {
+    color:darkmagenta;
+    font-family:Britannic;
+    font-size:80px;
+    font-style:italic;
+    margin-left:80px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#h2 {
+    color:#00a5a5;
+    font-size:50px;
+    font-style:italic;
+}
+#body {
+    background:url(\images\VID-20140610-WA0000.mp4);
+}
+video#bgvid { 
+    position: fixed;
+    background-repeat:repeat;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 20%;
+    width: auto;
+   height:auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(\images\VID-20140610-WA0000.mp4) no-repeat;
+    background-size: cover; 
+}
+
+#input1 {
+     margin-left:80px;
+    width:170px;
+    margin-bottom:20px;
+    height:30px;
+    font-size:12px;
+}
+#email {
+    font-size:12px; margin-left:130px; width:250px;margin-bottom:20px; height:35px;font:25px;
+}
+#email1 {
+    font-size:12px;
+    width:250px;
+    height:35px;
+    font:25px;
+}
+#password1 {
+    font-size:12px;
+    width:250px;
+    height:35px;
+    font:25px;
+}
+#username1 {
+    font-size:12px;
+    width:250px;
+    height:35px;
+    font:25px;
+}
+#cpassword {
+    font-size:12px;
+     margin-left:32px;
+    width:250px;
+    margin-bottom:20px;
+    height:35px;
+}
+#un {
+    font-size:12px;
+     margin-left:102px;
+    width:250px;
+    margin-bottom:0px;
+    height:35px;
+}
+#usename {
+     font-size:12px;
+    width:250px;
+    height:35px;
+    font:25px;
+}
+#password {
+    font-size:12px;
+      margin-left:90px;
+    width:250px;
+    margin-bottom:20px;
+    height:30px;
+}
+#slide-bar {
+    background-color:beige;
+    width:50px;
+}
+#btn1 {
+    margin-left:30px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+#btnd {
+    margin-left:30px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+#welcome {
+    color:darkgoldenrod;
+    font-family:Andalus;
+
+}
+#con_email {
+    margin-top:0px; width:160px; margin-left:32px; margin-bottom:0px; height:60px;
+   
+}
+#input2 {
+     margin-left:80px;
+    width:170px;
+    margin-bottom:20px;
+    height:30px;
+    font-size:12px;
+}
+#input3 {
+     margin-left:80px;
+    width:170px;
+    margin-bottom:20px;
+    height:30px;
+    font-size:12px;
+}
+#b_top {
+     margin-top:260px;
+    width:220px;
+    background-color:pink;
+    color:blue;
+
+}
+#i1 {
+    background-size:cover;
+    margin-left:175px;
+}
+#w1 {
+    color:ivory;
+    font-family:Andalus;
+    font-size-adjust:0.58;
+    font-style:italic;
+    font-size:35px;
+    margin-top:50px;
+}
+#w11 {
+    color:ivory;
+    font-family:Andalus;
+    font-size-adjust:0.58;
+    font-style:italic;
+    font-size:30px;
+
+}
+#w3 {
+    color:ivory;
+    font-family:Andalus;
+    font-size-adjust:0.58;
+    font-style:italic;
+    font-size:35px;
+    margin-top:0px;
+    margin-left:70px;
+}
+#w13 {
+    color:ivory;
+    font-family:Andalus;
+    font-size-adjust:0.58;
+    font-style:italic;
+    font-size:30px;
+    margin-left:70px;
+
+}
+
+#w2 {
+    color:ivory;
+    font-family:Andalus;
+    font-size-adjust:0.58;
+    font-style:italic;
+    font-size:35px;
+    margin-top:480px;
+}
+#w12 {
+    color:ivory;
+    font-family:Andalus;
+    font-size-adjust:0.58;
+    font-style:italic;
+    font-size:30px;
+
+}
+#imagecomm {
+    margin-left:120px;
+}
+#aboutus {
+    margin-right:80px;
+}
+#tags {
+    font-family:'Bodoni MT Poster';
+    color:darkmagenta;
+    font-size:55px;
+    font-style:italic;
+}
+#f1 {
+    width:1000px;
+}
+#u1 {
+    margin-left:180px;
+    margin-bottom:30px;
+    font-size:20px;
+}
+#pass {
+    font-size:20px;
+    margin-left:10px;
+}
+#input {
+    margin-left:80px;
+    width:170px;
+    margin-bottom:20px;
+    height:30px;
+}
+#container
+{
+    width: 100%;
+    overflow:auto;
+}
+
+#pages
+{
+     float:right;
+     width: 80% ;
+    
+}
+#u2 {
+    font-size:15px;
+    margin-left:100px;
+}
+#u3 {
+    font-size:12px;
+    margin-right:0px;
+}
+#r1 {
+    margin-left:50px;
+    margin-right:10px;
+}
+#submit {
+    width:80px;
+  margin-top:40px;
+  height:40px;
+}
+#p2 {
+    color:darkorchid;
+    font-size:20px;
+    font-style:italic;
+}
+#submit2 {
+    margin-left:250px;
+    height:40px;
+    margin-bottom:20px;
+    width:180px;
+}
+#bb {
+    margin-left: 30px;
+    width: 160px;
+    margin-top: 30px;
+    background-color: lightgray;
+}
+
+#b1 {
+    margin-top:0px;
+    margin-left:590px;
+    width:120px;
+    background-color:burlywood;
+    color:#00cdcd;
+}
+#l1 {
+   background-color:burlywood;
+   width:50px;
+   padding-left:20px;
+   margin-top:90px;
+
+}
+#l2 {
+ background-color:burlywood;
+ margin:90px 0px 100px 440px;
+}
+#p1 {
+    color:ivory;
+    font-size:30px;
+    font-family:Andalus;
+    font-style:oblique;
+    font-style:italic;
+    margin:15px 0px 0px 0px;
+}
+#i2 {
+  background-color:pink;
+}
+#b2 {
+
+    background-image: url('/images/Corporate_Event_Management_Kent_London.png');
+     background-size:cover;
+      background-repeat:no-repeat;
+      background-color:pink;
+}

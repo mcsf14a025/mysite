@@ -1,0 +1,73 @@
+﻿@{
+    Layout ="~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit_profile</title>
+</head>
+<body>
+<script>
+         $(document).ready(function () {
+             $("#edit").click(function () {
+                 var user = {
+                     password: $('#password1').val(),
+                     username: $('#username1').val(),
+                 };
+                 $.ajax({
+                     url: "/Accounts/Edit_profile2",
+                     typ: "PUT",
+                     data: JSON.stringify(user),
+                     contentType: "application/json",
+                     success: function (d) {
+                         alert("profle has been updated ")
+                     },
+                     error: function () {
+                         alert("cannot updated");
+                     }
+                 });
+             });
+                
+         });
+
+    </script>
+    <div>
+        <h3>Edit Profile</h3>
+            <div class="row">
+                <div class="col-md-4">
+        <div class="col-md-4" style="background-color:antiquewhite; width:200px; margin-left:20px; height:auto" >
+                <div class="btn-group-vertical" role="group" aria-label="..." >
+            <a class="btn btn-default"  id="btn1" href="/Accounts/Profile"> profile</a>
+             <a class="btn btn-default"  id="btnd" href="/Accounts/del_account">Delete account</a>
+             <a class="btn btn-default"  id="btn1" href="/Accounts/Accounts"  >Logout</a>        
+             </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+             <table>
+                @* <tr>
+                     <td>
+                          <label id="email">Enter email</label>
+                     </td>
+                     <td>   <input type="email" id="email1" placeholder="email" name="email" /></td>
+                 </tr>
+                *@ <tr>
+                     <td>  <label id="password">Enter password</label></td>
+                     <td>  <input type="password" placeholder="password" id="password1" name="password" /></td>
+                 </tr>
+                 <tr>
+                     <td><label id="username">Enter username</label></td>
+                     <td> <input type="text" placeholder="username" id="username1" name="username"/></td>
+                 </tr>
+             </table> 
+                  <input type="submit" class="btn btn-primary" value="Edit Profile" />
+            </div>
+                <div class="col-md-4">
+
+                </div>
+        </div>
+    </div>
+</body>
+</html>

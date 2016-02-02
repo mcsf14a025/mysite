@@ -1,0 +1,130 @@
+﻿body {
+}
+
+#background-slideshow{
+    height: 0px;
+    width: 1000px;
+    position: absolute;
+ margin-left:40px;
+    background:center;
+      /*border-color:antiquewhite;
+    margin-left:50px;
+    margin:50px;*/
+    /*float:right;*/
+}
+#script {
+    margin-left:40px;
+    background:center;
+
+}
+
+
+img.slides{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    height: 500px;
+	box-shadow: 0 0 10px #9ecaed;
+    background:center;
+    margin-left:40px;
+}
+
+img#s1{
+    caption-side:top;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    z-index: -1;
+    margin-top:40px;
+    background:center;
+    margin-left:40px;
+}
+
+img#s2{
+    z-index: -2;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    margin-top:40px;
+    background:center;
+    margin-left:40px;
+}
+
+img#s3{
+    z-index: -3;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background:center;
+
+}
+
+img#s4{
+    z-index: -4;
+     height:100%;
+     background:center;
+}
+
+img#s5{
+    z-index: -5;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background:center;
+}
+img#s6{
+    z-index: -6;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background:center;
+}
+
+img#s7{
+    z-index: -7;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background:center;
+    margin-left:40px;
+}
+
+img#s8{
+    z-index: -8;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background:center;
+    margin-left:40px;
+}
+
+img#s9{
+    z-index: -9;
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background:center;
+    margin-left:40px;
+}
+
+img#s10{
+    z-index: -10;
+    margin-bottom:0px;
+     height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    margin-left:40px;
+}
+#pages
+{
+     float:right;
+      height:100%;
+     width: 80% ;
+     margin-left:40px;
+    
+}
+
+
+
+

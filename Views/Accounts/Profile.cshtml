@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+   <link href="~/CSS/StyleSheet1.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Profile</title>
+ 
+</head>
+<body>
+   @*  <video autoplay="autoplay" muted="muted"  id="bgvid" loop="loop">
+                <source src="/images/VID-20140610-WA0000.mp4" type="video/mp4" />
+    
+       </video>*@
+        <script>
+            $(document).ready(function () {
+                $("#btnd").click(function () {
+                    $.ajax(
+                   {
+                       URL: "/Accounts/del_account",
+                       type: "Delete",
+                       contentType: "application/json",
+                       success: function () {
+                           window.location("Accounts");
+                       },
+                       error: function () {
+                           alert("cant delete try again ");
+                       }
+                   });
+                });
+            });
+
+    </script>
+     
+    <div>
+          <h1 style="color:blueviolet; font-family:'Bauhaus 93'">Welcome  @Session["email"]</h1>
+  
+      <div class="row">
+            <div class="col-md-4" style="background-color:antiquewhite; width:200px; margin-left:20px; height:auto" >
+                <div class="btn-group-vertical" role="group" aria-label="..." >
+            <a class="btn btn-default"  id="btne" href="/Accounts/Edit_profile">Edit profile</a>
+             <a class="btn btn-default"  id="btnd" href="/Accounts/del_account">Delete account</a>
+             <a class="btn btn-default"  id="btnl" href="/Accounts/Accounts"  >Logout</a>  
+                   
+             </div>
+            </div>
+            <div class="col-md-8">
+                    <div>
+                    <h3 style="color:deepskyblue; font-family:Broadway">Fashion</h3>
+                    <p> Model.Fashion</p>
+                        </div>
+                     <div><h3 style="color:deepskyblue; font-family:Broadway">Musics</h3>
+                     <p>@Model.Music</p></div>
+                    <div> <h3 style="color:deepskyblue; font-family:Broadway">Photography</h3>
+                    <p>@Model.Photography</p></div>
+                     <div><h3 style="color:deepskyblue; font-family:Broadway">Sciences</h3>
+                    <p>@Model.Sciences</p></div>
+                     <div><h3 style="color:deepskyblue; font-family:Broadway">Health</h3>
+                    <p>@Model.Health</p></div>
+                </div>
+            
+            <form action="/Accounts/File_Upload" method="post" enctype="multipart/form-data">
+                <input  type="file" name="file" />
+                <input type="submit" style="background-color:aquamarine" class="btn btn-primary" name="Upload Image" value="file_upload" />
+            </form>
+       
+        </div>
+        </div>
+</body>
+</html>

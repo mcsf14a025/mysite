@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //ViewBag.Title = "Index";
+}
+<link href="~/CSS/StyleSheet1.css" rel="stylesheet" />
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body id="b2">
+     
+      <div>
+        <div id="BackgroundSlideshow">
+          <img class="slides" src="/images/Band-Lighting.jpg"  id="s1" />
+            <img class="slides" src="/images/Corporate_Event_Management_Kent_London.png"  id="s2"/>
+             <img class="slides" src="/images/FCB_Event.v1330357583.jpg" id="s3" />
+            <img class="slides" src="/images/atlanta-private-cooking-classes-and-events2.jpg" id="s4" />
+            <img class="slides" src="/images/Event-Management-Pakistan-41.jpg" id="s5" />
+           <img class="slides" src="/images/new-google.png"  id="s6"/>
+             <img class="slides" src="/images/event-photographer-scaled.jpg" id="s7" />
+           @*<img class="slides" src="/images/harp10.jpg" id="s8" />*@
+             <img class="slides" src="/images/images(1).jpg" id="s9" />
+             <img class="slides" src="/images/jane.jpg" id="s10" />
+        </div>
+    </div>
+ <script id="script">
+     var indexer = 0;
+     var animateInterval;
+     function animate() {
+         if (indexer == 0) {
+             $("#BackgroundSlideshow>#s1").fadeOut(2000);
+             $("#BackgroundSlideshow>#s2").fadeIn(2000);
+         }
+         else if (indexer == 1) {
+             $("#BackgroundSlideshow>#s2").fadeOut(2000);
+             $("#BackgroundSlideshow>#s3").fadeIn(2000);
+         }
+         else if (indexer == 2) {
+             $("#BackgroundSlideshow>#s3").fadeOut(2000);
+             $("#BackgroundSlideshow>#s4").fadeIn(2000);
+         }
+         else if (indexer == 3) {
+             $("#BackgroundSlideshow>#s4").fadeOut(2000);
+             $("#BackgroundSlideshow>#s5").fadeIn(2000);
+         }
+         else if (indexer == 4) {
+             $("#BackgroundSlideshow>#s5").fadeOut(2000);
+             $("#BackgroundSlideshow>#s6").fadeIn(2000);
+         }
+         else if (indexer == 5) {
+             $("#BackgroundSlideshow>#s6").fadeOut(2000);
+             $("#BackgroundSlideshow>#s7").fadeIn(2000);
+         }
+         else if (indexer == 6) {
+             $("#BackgroundSlideshow>#s7").fadeOut(2000);
+             $("#BackgroundSlideshow>#s8").fadeIn(2000);
+         }
+         else if (indexer == 7) {
+             $("#BackgroundSlideshow>#s8").fadeOut(2000);
+             $("#BackgroundSlideshow>#s9").fadeIn(2000);
+         }
+         else if (indexer == 8) {
+             $("#BackgroundSlideshow>#s9").fadeOut(2000);
+             $("#BackgroundSlideshow>#s10").fadeIn(2000);
+         }
+         else if (indexer == 9) {
+             $("#BackgroundSlideshow>#s10").fadeOut(2000);
+             $("#BackgroundSlideshow>#s1").fadeIn(2000);
+         }
+         if (indexer == 9) {
+             indexer = 0;
+         }
+         else
+             indexer++;
+
+     };
+     animateInterval = setInterval(animate, 7000);
+     animate();
+
+
+ </script>
+</body>
+</html>
